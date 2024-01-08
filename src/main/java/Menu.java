@@ -20,10 +20,15 @@ public class Menu {
 
         switch (number){
             case 1 -> signup();
-            case 2 -> System.out.println("sign in");
+            case 2 -> signIn();
             case 3 -> System.out.println("exit");
         }
     }
+
+    private void signIn() throws SQLException {
+        userService.signIn();
+    }
+
     public void signup() throws SQLException {
         userService.signup();
     }
